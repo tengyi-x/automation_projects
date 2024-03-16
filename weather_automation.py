@@ -102,7 +102,7 @@ def get_data():
 
     # find current temperature
     try:
-        current_temp_elem = WebDriverWait(driver_weather, 5).until(
+        current_temp_elem = WebDriverWait(driver_weather, 10).until(
         EC.presence_of_element_located((By.CLASS_NAME, 'display-temp'))
         )
         current_temp = current_temp_elem.text[:-2]
